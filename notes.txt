@@ -1,0 +1,9 @@
+tenemos la category y products
+falta el test de products con corelacion a category
+total de 13 endpoints / excepto login y products/images
+total 13 endpoints / falta añadir imagenes
+
+endpoints protegidos 3/3 2/2 4/3 3/0 4/0 2/0  18
+endpoints creados    5/5 3/3 6/5 3/0 4/0 2/0  23/13
+
+falta crear endpoint de imagenes
