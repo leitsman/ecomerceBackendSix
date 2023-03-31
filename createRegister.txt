@@ -1,0 +1,44 @@
+// const Category = require('../../models/Category');
+
+// const CreateCategories = async () => {
+//     const Categories = {
+//         name: 'category test'
+//     }
+//     await Category.bulkCreate(Categories);
+// }
+
+// module.exports = CreateCategories;
+
+
+
+
+// const Product = require('../../models/Product');
+
+// const createProducts = async () => {
+//     const products = {
+//         title: 'testeosumg 12',
+//         description: 'solo es la descripcion para saber si este test falla como siempre',
+//         categoryId: 1,
+//         price: 'test1234'
+//     }
+//     await Product.bulkCreate(products);
+// }
+
+// module.exports = createProducts;
+
+
+
+// const User = require('../../models/User');
+
+// const createUsers = async () => {
+//     const users = {
+//         firstName: 'ingnacio',
+//         lastName: 'testaldo',
+//         email: 'testeo@gmail.com',
+//         password: 'test1234',
+//         phone: '72555789',
+//     }
+//     await User.bulkCreate(users);
+// }
+
+// module.exports = createUsers;

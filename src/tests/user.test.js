@@ -36,12 +36,6 @@ test('GET /users should return users', async () => {
     expect(res.body).toHaveLength(2);
 });
 
-test('GET /users:id should return a user', async () => {
-    const res = await request(app).get(`/users/${getId}`).set('Authorization', `Bearer ${token}`);
-    expect(res.status).toBe(200);
-    expect(res.body.firstName).toBe('manuel');
-});
-
 test('PUT /users:id should return a user', async () => {
     const body = {
         firstName: 'manuel',

@@ -2,9 +2,17 @@ const catchError = require('../utils/catchError');
 const Product = require('../models/Product');
 const Category = require('../models/Category');
 const ProductImg = require('../models/ProductImg');
+const { Op } = require('sequelize');
 
 const getAll = catchError(async (req, res) => {
-    const results = await Product.findAll({ include: [Category, ProductImg] });
+    const { headline, categoryId } = req.query;
+    const where = {};
+    if (headline) where.headline = { [Op.iLike]: `%${headline}%` };
+    if (headline) where.categoryId = categoryId;
+    const results = await Product.findAll({
+        include: [Category, ProductImg],
+        where
+    });
     return res.json(results);
 });
 
@@ -39,6 +47,7 @@ const update = catchError(async (req, res) => {
 const setProductImages = catchError(async (req, res) => {
     const { id } = req.params;
     const product = await Product.findByPk(id);
+    if (!product) return res.sendStatus(404);
     await product.setProductImgs(req.body);
     const images = await product.getProductImgs();
     return res.json(images);

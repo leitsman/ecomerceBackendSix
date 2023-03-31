@@ -7,7 +7,7 @@ const Product = sequelize.define('product', {
         allowNull: false
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false
     },
     // categoryId

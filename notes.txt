@@ -4,6 +4,9 @@ total de 13 endpoints / excepto login y products/images
 total 13 endpoints / falta añadir imagenes
 
 endpoints protegidos 3/3 2/2 4/3 3/0 4/0 2/0  18
-endpoints creados    5/5 3/3 6/5 3/0 4/0 2/0  23/13
+endpoints creados    5/5 3/3 6/6 3/0 4/4 2/2  23/20
 
-falta crear endpoint de imagenes
+falta crear endpoint de imagenes: hecho
+
+se nesesita probar con front end y explorar sus dificultades
+error en imagenes: es un array. pero con objetos adentro

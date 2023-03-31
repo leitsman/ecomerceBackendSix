@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const getAll = catchError(async (req, res) => {
-    const images = await ProductImg.findAll()
+    const images = await ProductImg.findAll({ attributes: { exclude: ['id', 'filename', 'productId'] } })
     return res.json(images)
 });
 

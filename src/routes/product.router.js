@@ -13,6 +13,6 @@ productRouter.route('/:id')
     .delete(verifyJWT, remove)
     .put(verifyJWT, update);
 productRouter.route('/:id/images')
-    .post(setProductImages);
+    .post(verifyJWT, setProductImages);
 
 module.exports = productRouter;
