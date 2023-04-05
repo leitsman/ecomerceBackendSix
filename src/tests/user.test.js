@@ -6,9 +6,9 @@ let token;
 
 test('POST /users should create new user', async () => {
     const newUser = {
-        firstName: 'manuel',
-        lastName: 'cnauqi',
-        email: 'misterium273@gmail.com',
+        firstName: 'alan',
+        lastName: 'doe',
+        email: 'laprueba@gmail.com',
         password: 'hola1234',
         phone: '72555789',
     }
@@ -20,7 +20,7 @@ test('POST /users should create new user', async () => {
 
 test('POST /users should return user login', async () => {
     const body = {
-        email: 'misterium273@gmail.com',
+        email: 'laprueba@gmail.com',
         password: 'hola1234',
     }
     const res = await request(app).post('/users/login').send(body);
@@ -38,9 +38,9 @@ test('GET /users should return users', async () => {
 
 test('PUT /users:id should return a user', async () => {
     const body = {
-        firstName: 'manuel',
-        lastName: 'canqui',
-        email: 'misterium273@gmail.com',
+        firstName: 'john',
+        lastName: 'doe',
+        email: 'laprueba@gmail.com',
         password: 'hola1234',
         phone: '72555789',
     }

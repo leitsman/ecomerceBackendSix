@@ -13,10 +13,6 @@ Category.hasMany(Product);
 ProductImg.belongsTo(Product);
 Product.hasMany(ProductImg);
 
-// setProductImages
-// ProductImg.belongsToMany(Product, { through: 'productsImgs' });
-// Product.belongsToMany(ProductImg, { through: 'productsImgs' });
-
 // Cart user
 Cart.belongsTo(User);
 User.hasMany(Cart);
@@ -27,7 +23,6 @@ Product.hasMany(Cart)
 // purchases User
 Purchase.belongsTo(User)
 User.hasMany(Purchase)
-
 // purchases Product
 Purchase.belongsTo(Product)
 Product.hasMany(Purchase)

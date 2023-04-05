@@ -18,7 +18,7 @@ beforeAll(async () => {
 
 test('POST /cart should create new cart', async () => {
     const newProduct = {
-        title: 'samsung a124sas',
+        title: 'samsung a124s',
         description: 'purchases (privado) debe traer las compras del usuari',
         price: 'hola1234'
     };

@@ -57,7 +57,7 @@ test('PUT /products:id should return a product', async () => {
 });
 
 test('POST /products should set in product', async () => {
-    const images = await ProductImg.create({ url: "http://localtest0000", filename: 'uploads/among us.png' })
+    const images = await ProductImg.create({ url: "http://localtest0000", publicId: 'uploads/amongUs.png' })
     const res = await request(app).post(`/products/${getId}/images`).send([images.id]).set('Authorization', `Bearer ${token}`);
     await images.destroy();
     expect(res.status).toBe(200);

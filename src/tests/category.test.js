@@ -16,7 +16,7 @@ beforeAll(async () => {
 
 test('POST /categories should create new category', async () => {
     const newCategory = {
-        name: 'nevertel'
+        name: 'computers'
     }
     const res = await request(app).post('/categories').send(newCategory).set('Authorization', `Bearer ${token}`);
     getId = res.body.id;

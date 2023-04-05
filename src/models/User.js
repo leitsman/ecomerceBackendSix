@@ -25,7 +25,7 @@ const User = sequelize.define('user', {
         allowNull: false
     },
 },
-    { timestamps: false } //disabled createAt/updateAt
+    { timestamps: false }
 );
 
 User.beforeCreate(async (req) => {

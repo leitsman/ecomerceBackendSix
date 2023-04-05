@@ -16,7 +16,7 @@ const Product = sequelize.define('product', {
         allowNull: false
     }
 },
-    { timestamps: false } //disabled createAt/updateAt
+    { timestamps: false }
 );
 
 module.exports = Product;

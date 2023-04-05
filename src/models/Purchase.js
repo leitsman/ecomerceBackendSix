@@ -6,8 +6,6 @@ const Purchase = sequelize.define('purchase', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
-},
-    { timestamps: false }
-);
+});
 
 module.exports = Purchase;

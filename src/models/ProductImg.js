@@ -6,13 +6,13 @@ const ProductImg = sequelize.define('productImg', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    filename: {
+    publicId: {
         type: DataTypes.STRING,
         allowNull: false
     }
     //productId:
 },
-    { timestamps: false } //disabled createAt/updateAt
+    { timestamps: false }
 );
 
 module.exports = ProductImg;
