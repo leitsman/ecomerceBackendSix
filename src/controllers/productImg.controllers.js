@@ -12,9 +12,10 @@ const getAll = catchError(async (req, res) => {
 });
 
 const create = catchError(async (req, res) => {
+    const { productId } = req.body;
     const { path, filename } = req.file;
     const { url, public_id } = await uploadToCloudinary(path, filename);
-    const image = await ProductImg.create({ url, publicId: public_id });
+    const image = await ProductImg.create({ url, publicId: public_id, productId });
     return res.status(201).json(image);
 });
 
